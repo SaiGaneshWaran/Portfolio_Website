@@ -15,7 +15,7 @@
   top: 0; /* 8. Child combinator */
   left: 0; /* 8. Child combinator */
   width: 100%;
-  padding: 35px 10%;
+  padding: 25px 10%;
   background: rgba(0, 0, 0, 0.866); /* 2. Semi-transparent color */
   backdrop-filter: blur(10px);
   display: flex;
