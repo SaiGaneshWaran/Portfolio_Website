@@ -1,0 +1,825 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
+
+/* Reset margin and padding, use universal selector for box-sizing and font-family */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif; /* 1. Specify font throughout the site */
+}
+
+.header {
+  position: fixed;
+  top: 0; /* 8. Child combinator */
+  left: 0; /* 8. Child combinator */
+  width: 100%;
+  padding: 35px 10%;
+  background: rgba(0, 0, 0, 0.866); /* 2. Semi-transparent color */
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+  /* Consider specificity: add more specific selectors if needed */
+}
+
+body {
+  background-color: black;
+}
+.logo {
+  font-size: 23px;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s ease; /* 18. Transition */
+}
+.logo:hover {
+  color: cyan;
+  text-shadow: 0 0 25px cyan, 0 0 50px cyan; /* 3. Shadows, and 4. Text effects */
+  transform: scale(1.1); /* 17. Transform */
+}
+
+/* 7. User action pseudo class */
+span {
+  color: darkcyan;
+}
+.navbar a {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  margin: 0 35px;
+  border-bottom: 5px solid transparent;
+  transition: 0.3s ease; /* 18. Transition */
+}
+.navbar a:hover,
+.navbar a.active {
+  color: cyan;
+  border-bottom: 3px solid cyan;
+}
+.contact {
+  padding: 10px 25px;
+  background-color: white;
+  color: black;
+  border: 2px solid transparent;
+  border-radius: 8px; /* 15. Rounded corners */
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: 0.3s ease; /* 18. Transition */
+}
+.contact:hover {
+  background-color: cyan;
+  box-shadow: 0 0 25px cyan; /* 3. Shadows */
+  color: white;
+}
+#home {
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  background: rgb(6, 0, 3);
+  display: flex;
+  align-items: center;
+  gap: 7em;
+  padding: 30px 12% 0;
+}
+.home-content {
+  max-width: 800px;
+}
+.home-content h3 {
+  font-size: 42px;
+}
+.home-content h1 {
+  font-size: 62px;
+  line-height: 1.2;
+}
+.home-content p {
+  font-size: 18px;
+  margin: 25px 0 30px;
+}
+.btn-box {
+  width: 345px;
+  display: flex;
+  gap: 2em;
+  margin-top: 50px;
+}
+.btn-1 {
+  padding: 15px 28px;
+  background-color: black;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 8px; /* 15. Rounded corners */
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: 0.3s ease; /* 18. Transition */
+  cursor: pointer;
+}
+.btn-1:hover {
+  background-color: white;
+  color: cyan;
+  border: 2px solid cyan;
+}
+.btn-2 {
+  padding: 15px 28px;
+  background-color: cyan;
+  color: white;
+  border: 2px solid cyan;
+  border-radius: 8px; /* 15. Rounded corners */
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: 0.3s ease; /* 18. Transition */
+  cursor: pointer;
+}
+.btn-2:hover {
+  background-color: white;
+  color: cyan;
+}
+
+.social {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+.img-box img {
+  border-radius: 50%; /* 15. Rounded corners */
+  width: 550px;
+}
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: cyan;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.6); /* 2. Semi-transparent color */
+  width: 50px;
+}
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 3%;
+  gap: 10em;
+  background: black;
+}
+.about-img img {
+  position: relative;
+  width: 420px;
+  margin-top: 100px;
+  box-shadow: 0 0 25px cyan, 0 0 50px cyan; /* 3. Shadows */
+  border-radius: 50%; /* 15. Rounded corners */
+}
+
+.home-content-img {
+  position: absolute;
+  right: 50px;
+  width: 350px;
+  bottom: 50px;
+  box-shadow: 0 0 25px cyan, 0 0 50px cyan; /* 3. Shadows */
+  border-radius: 50%; /* 15. Rounded corners */
+}
+
+.about-content h2 {
+  text-align: left;
+  color: white;
+  font-size: 50px;
+}
+.about-content {
+  font-size: 40px;
+  color: white;
+}
+.about-content p {
+  color: white;
+  font-size: 18px;
+  margin: 2em 0 3em;
+}
+.education-container {
+  width: 80%;
+  margin: 50px auto;
+}
+.education-title {
+  font-size: 24px;
+  color: #2ed4c4;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #009688;
+  left: 20px;
+  margin-left: -1.5px;
+}
+.timeline-item {
+  margin: 0 0 20px 40px;
+  padding: 20px;
+  background: #fff;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: -30px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #009688;
+  border: 2px solid #fff;
+}
+.timeline-item h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.timeline-item h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #009688;
+  font-weight: bold;
+}
+.timeline-item p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+  .animate-me {
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  .skills-section {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    
+  }
+  
+  .skills-section h2 {
+    font-size: 2rem;
+    color:#2ed4c4;
+    margin-bottom: 1em;
+    text-align:center;
+  
+  }
+  
+  .skill {
+    margin-bottom: 20px;
+  }
+  
+  .skill p {
+    font-size: 1.2rem;
+    margin-bottom: -20px;
+    margin-top: 30px;
+    margin-right: 53%;
+    color: white;
+  }
+  
+  .progress-bar {
+    background: #444;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 50%;
+    margin-left: 30%;
+  }
+  
+  .progress {
+    background: cyan;
+    height: 20px;
+    line-height: 20px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-right: 10px;
+    animation: fillProgress 2s ease-in-out;
+  }
+  
+  @keyframes fillProgress {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+  }
+
+/* Attribute selectors (example) */
+a[href^="https://"] {
+  color: lightgreen;
+}
+img[alt~="hero"] {
+  border: 1px solid red;
+}
+/* Validity pseudo class (example) */
+input:valid {
+  border: 2px solid green;
+}
+input:invalid {
+  border: 2px solid red;
+}
+
+#projects {
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 8% 3%;
+  gap: 10em;
+}
+.section_text_p1 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  }
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+.title_project {
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.project-img {
+  border-radius: 2rem; /* 15. Rounded corners */
+  width: 264px;
+  height: 289px;
+}
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-item {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.project-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Hover effect styling */
+.project-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 93%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.project-item:hover .project-info {
+  opacity: 1;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+/* Styling for project titles and descriptions */
+.project-info h3 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.project-info p {
+  font-size: 1em;
+  margin-top: 10px;
+}
+.main-content {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+.blog-post {
+  background-color: darkcyan;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+}
+.blog-post img {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+.blog-post-content h2 {
+  color: darkblue;
+  margin-top: 0;
+}
+.blog-post-content .date {
+  color: #cccccc;
+  margin: 10px 0;
+}
+.blog-post-content p {
+  line-height: 1.6;
+}
+.blog-button .btn-2{
+  padding: 2px 28px;
+  background-color: cyan;
+  color: white;
+  border: 2px solid cyan;
+  border-radius: 8px; /* 15. Rounded corners */
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: 0.3s ease; /* 18. Transition */
+  cursor: pointer;
+ 
+  
+}
+.blog-button .btn-2:hover {
+  background-color: white;
+  color: cyan;
+}
+
+
+
+/* Commented out section; add checks for page and its child */
+/* .page{
+    display: none;
+}
+
+.page:target{
+    display: initial;
+}
+
+.page:target ~ .contact-form{
+    display: none;
+} */
+
+#contact {
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 3% 3%;
+  gap: 10em;
+}
+/* Pseudo elements with generated content */
+.contact-form h2:before {
+  color: gold;
+  display: block;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  font-size: 36px;
+  color: gold;
+}
+.contact-form form {
+  max-width: 50em;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.contact-form form .input-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-form form .input-box input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 1.5em;
+  font-size: 18px;
+  color: cyan;
+  background: rgb(241, 241, 241);
+  border-radius: 0.8rem; /* 15. Rounded corners */
+  margin: 1rem 0;
+  resize: none;
+}
+.footer {
+  position: relative;
+  bottom: 0%;
+  width: 100%;
+  padding: 40px 0;
+  background-color: black;
+}
+.home-content.social {
+  text-align: center;
+  padding-top: 40px;
+  color: white;
+}
+.home-content .social a {
+  font-size: 24px;
+  color: white;
+  border: 2px solid cyan;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 50%; /* 15. Rounded corners */
+  margin: 0 8px;
+  box-shadow: inset 0 0 10px cyan, 0 0 10px cyan; /* 3. Shadows */
+  transition: 0.3s ease; /* 18. Transition */
+}
+.home-content.social a:hover {
+  transform: scale(1.2) translateY(-10px); /* 17. Transform */
+  color: cyan;
+  border: 2px solid cyan;
+}
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+footer ul li a {
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease; /* 18. Transition */
+}
+.footer ul li a:hover {
+  border-bottom: 3px solid cyan;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0 15px;
+}
+.footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
+/* Add a checkbox hack for mobile menu */
+#menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* Laptop screen */
+/* 10. Negation pseudo class */
+@media screen and (max-width: 1024px) {
+  .header:not(.fixed-header) {
+    padding: 20px 5%;
+  }
+
+  .navbar a {
+    margin: 0 15px;
+    font-size: 16px;
+  }
+
+  #home {
+    padding: 100px 5% 0;
+  }
+
+  .home-content h1 {
+    font-size: 48px;
+  }
+
+  .home-content-img {
+    width: 300px;
+    right: 30px;
+  }
+
+  #about {
+    padding: 8% 5%;
+    gap: 3em;
+  }
+
+  .about-img img {
+    width: 400px;
+  }
+}
+
+/* Tablet screen */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 15px 4%;
+    position: relative;
+  }
+  /* 6. Structural Selectors: first-child and last-child */
+  .header .navbar a:first-child {
+    color: red;
+  }
+  .header .navbar a:last-child {
+    color: blue;
+  }
+
+  /* Menu button styling */
+  .menu-btn {
+    display: block;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .menu-btn:before {
+    content: "☰";
+  }
+
+  #menu-toggle:checked ~ .navbar {
+    display: block;
+  }
+
+  #menu-toggle:checked ~ .menu-btn:before {
+    content: "×";
+  }
+
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 15px 0;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .contact {
+    position: absolute;
+    right: 70px;
+    top: 15px;
+  }
+
+  #home {
+    flex-direction: column-reverse;
+    padding-top: 150px;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 36px;
+  }
+
+  .home-content-img {
+    position: relative;
+    width: 250px;
+    right: 0;
+    margin: 0 auto 30px;
+    bottom: 0;
+  }
+
+  #about {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .about-img img {
+    width: 300px;
+  }
+
+  .btn-box {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .btn-1, .btn-2 {
+    width: 200px;
+  }
+}
+
+/* Mobile screen */
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .contact {
+    padding: 8px 15px;
+    font-size: 14px;
+    right: 60px;
+  }
+
+  .home-content h1 {
+    font-size: 28px;
+  }
+
+  .home-content-img {
+    width: 200px;
+  }
+
+  .about-img img {
+    width: 250px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form form .input-box {
+    flex-direction: column;
+  }
+
+  .contact-form form .input-box input {
+    width: 100%;
+  }
+
+  .footer .social a {
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+    margin: 0 5px;
+  }
+
+  .footer ul li {
+    padding: 0 8px;
+  }
+
+  .footer ul li a {
+    font-size: 14px;
+  }
+}
+/* 16. Gradient */
+.background-gradient {
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient from top left to bottom right */
+}
+/* 19. Animation */
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+
