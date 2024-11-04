@@ -78,7 +78,7 @@ body {
 }
 .navbar a:nth-last-child(1) {
   color: white; 
-  text-transform: uppercase;
+  text-transform: none;
 }
 .navbar a[href$=".pdf"] ~ a {
   color: white; 
@@ -649,6 +649,9 @@ footer li {
   top: 50px;
   left: -13px;
 }
+.page .title_project{
+  color: #2ed4c4;
+}
 
 form {
   padding: 2.3rem 2.2rem;
@@ -866,13 +869,20 @@ textarea.input {
     padding: 100px 5% 0;
   }
 
-  .home-content h1 {
+  .home-content .role {
     font-size: 48px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .home-content .role h1 {
+    font-size: 48px;
+    
   }
 
   .home-content-img {
     width: 300px;
     right: 30px;
+    margin-bottom: 90px;
   }
 
   #about {
@@ -882,6 +892,9 @@ textarea.input {
 
   .about-img img {
     width: 400px;
+  }
+  .skill p{
+    margin-left: -25px;
   }
 }
 
@@ -978,7 +991,7 @@ textarea.input {
     flex-direction: column;
     gap: 15px;
     align-items: center;
-    margin-left: 150px;
+    margin-left: 5px;
   }
   .about-content h2{
     text-align: center;
@@ -995,6 +1008,18 @@ textarea.input {
     height: 50vh;
     font-size: x-small;
   }
+  .social{
+    margin-right: 80px;
+  }
+  .form{
+    width: 600px;
+    height: 700px;
+    
+  }
+  .big-circle{
+    margin-bottom: 120px;
+  }
+
   
 }
 
@@ -1026,17 +1051,7 @@ textarea.input {
     width: 250px;
   }
 
-  .contact-form {
-    padding: 20px;
-  }
 
-  .contact-form form .input-box {
-    flex-direction: column;
-  }
-
-  .contact-form form .input-box input {
-    width: 100%;
-  }
   .header .logo{
     margin-left: 30px;
   }
@@ -1082,10 +1097,19 @@ textarea.input {
     font-size: 14px;
   }
   .footer::before {
-    content: "© "; /* Copyright symbol */
+    content: " "; 
     color: #ffffff;
     margin-right: 5px;
   }
+ .contact-info{
+  width: 200px;
+ }
+ .big-circle{
+  margin-right: -70px;
+ }
+ .form .btn{
+  margin-left: 20px ;
+ }
  
 }
 /* 16. Gradient */
