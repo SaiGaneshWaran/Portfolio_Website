@@ -27,25 +27,65 @@
 
         </header>
        
-         <section class="contact-form" id="contact">
-            <h2 class="contact-me">Contact <span>Me</span></h2>
-          
-            <form action="#">
-              <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email">
-              </div>
-          
-              <div class="input-box">
-                <input type="number" placeholder="Phone Number">
-                <input type="text" placeholder="Subject">
-              </div>
-          
-              <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            
-            <input type="submit" value="Send Message"class="btn-1">
-            </form>
-        </section>  
+        <div class="contact-container">
+            <span class="big-circle"></span>
+            <img src="img/shape.png" class="square" alt="" />
+            <div class="form">
+                <div class="contact-info">
+                    <h3 class="contact-title">Let's connect</h3>
+                    <p class="text">
+                        Hi, <br>
+                        We greatly appreciate your feedback as it helps us enhance our services to better serve you and surpass your expectations. Your insights, suggestions, and opinions play a vital role in shaping the future of our offerings. 
+                    </p>
+                    <div class="info">
+                        <div class="information">
+                            <p>No 66 davidson road</p>
+                        </div>
+                        <div class="information">
+                            <p>saiganeshwaran@gmail.com</p>
+                        </div>
+                        <div class="information">
+                            <p>0767459242</p>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="contact-form">
+                    <span class="circle one"></span>
+                    <span class="circle two"></span>
+    
+                    <form id="myForm" >
+                        <h3 class="contact-title">Feedback form</h3>
+                        <div class="input-container">
+                            <input id="name" type="text" name="name" class="input" required />
+                            <label for="">Name</label>
+                            <span>Name</span>
+                        </div>
+                        <div class="input-container">
+                            <input id="email" type="email" name="email" class="input" required />
+                            <label for="">Email</label>
+                            <span>Email</span>
+                        </div>
+                        <div class="input-container">
+                            <input id="phone" type="tel" name="phone" class="input" required />
+                            <label for="">Phone</label>
+                            <span>Phone</span>
+                        </div>
+                        
+                        <div class="input-container textarea">
+                            <textarea id="message" name="message" class="input" required></textarea>
+                            <label for="">Message</label>
+                            <span>Message</span>
+                        </div>
+                        <input type="submit" value="Send" class="btn" id="sendButton" />
+                        <button type="reset" class="btn">Reset</button>
+                    </form>
+    
+               
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             
             <ul class="list">
