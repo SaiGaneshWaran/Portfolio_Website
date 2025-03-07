@@ -1152,6 +1152,59 @@ textarea.input {
 }
 
 
+.input-container {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.input-container.focus label {
+    transform: translateY(-20px);
+}
+
+.input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #666;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-container.textarea label {
+    top: 1rem;
+    transform: translateY(0);
+}
+
+.input-container.focus .input {
+    border-bottom-color: #333;
+}
+
+.btn {
+    padding: 0.6rem 1.3rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #444;
+}
 
   
   
