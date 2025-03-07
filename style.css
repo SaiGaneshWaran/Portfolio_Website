@@ -1096,10 +1096,10 @@ textarea.input {
   }
 }
 @keyframes rotateText {
-  0% { content: "Web Developer"; }
-  33% { content: "Data Analyst"; }
-  66% { content: "IT Consultant"; }
-  100% { content: "Technical Writer"; }
+  0% { content: "Computer Science Student"; }
+33% { content: "Aspiring Software Engineer"; }
+66% { content: "Web Developer"; }
+100% { content: "Tech Enthusiast"; }
 }
 
 
