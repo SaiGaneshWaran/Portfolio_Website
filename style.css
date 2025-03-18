@@ -2066,6 +2066,115 @@ textarea.input {
     min-width: 140px;
   }
 }
+/* Fix 1: Logo text size on smaller screens */
+@media screen and (max-width: 767px) {
+  .logo {
+    font-size: 18px; /* Increased from 16px */
+    margin-left: 5px;
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  
+  /* Fix for very small screens */
+  @media screen and (max-width: 360px) {
+    .logo {
+      font-size: 16px;
+    }
+    
+    .logo span {
+      display: block; /* Stack the name parts on very small screens */
+      line-height: 1.1;
+    }
+  }
+}
+
+/* Fix 2: Social icons centering and spacing */
+@media screen and (max-width: 767px) {
+  /* Social Icons positioning */
+  .social {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin: 2.5rem auto 1rem auto;
+    padding: 0;
+  }
+  
+  /* Add gap between buttons and social icons */
+  .cta-buttons {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Fix 3: Blog section responsiveness for mobile */
+@media screen and (max-width: 767px) {
+  /* Blog container */
+  .main-content {
+    padding: 1rem 0.5rem;
+  }
+  
+  /* Blog posts */
+  .blog-post {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+  }
+  
+  /* Blog images */
+  .blog-post img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  
+  /* Blog content */
+  .blog-post-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-post-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+  
+  /* Blog button positioning */
+  .blog-button {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  
+  .blog-button .btn-2 {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Additional fixes for specific devices */
+@media screen and (max-width: 390px) {
+  .project-gallery {
+    margin-left: 0; /* Remove left margin */
+  }
+  
+  .blog-post {
+    overflow: hidden; /* Control overflow */
+  }
+  
+  .title_project {
+    font-size: 1.8rem; /* Smaller title on very small screens */
+  }
+  
+  .section_text_p1 {
+    font-size: 0.9rem;
+  }
+}
 
   
   
