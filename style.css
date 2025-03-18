@@ -2069,19 +2069,20 @@ textarea.input {
 /* Fix 1: Logo text size on smaller screens */
 @media screen and (max-width: 767px) {
   .logo {
-    font-size: 18px; /* Increased from 16px */
-    margin-left: 5px;
+    font-size: 20px; /* Increased from 16px */
+    margin-left: 180px;
+    margin-top: 20px;
     white-space: nowrap; /* Prevent wrapping */
   }
   
   /* Fix for very small screens */
   @media screen and (max-width: 360px) {
     .logo {
-      font-size: 16px;
+      font-size: 25px;
     }
     
     .logo span {
-      display: block; /* Stack the name parts on very small screens */
+       /* Stack the name parts on very small screens */
       line-height: 1.1;
     }
   }
