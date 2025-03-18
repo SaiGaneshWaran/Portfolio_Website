@@ -820,7 +820,7 @@ input:invalid {
   background-color: black;
 }
 .home-content.social {
-  text-align: center;
+  text-align: left;
   padding-top: 40px;
   color: white;
 }
@@ -1521,6 +1521,7 @@ textarea.input {
   margin-top: 40px;
   display: flex;
   gap: 15px;
+  
 }
 
 .social-btn {
@@ -1636,7 +1637,7 @@ textarea.input {
 .tech-stack-section {
   padding: 4rem 0;
   background: #0a0a0a;
-  color: #fff;
+  color: cyan;
   text-align: center;
 }
 
